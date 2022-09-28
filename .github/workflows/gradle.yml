@@ -12,12 +12,10 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest,macOS-latest]
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
