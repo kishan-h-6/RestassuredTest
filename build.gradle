@@ -23,12 +23,12 @@ dependencies {
     testImplementation 'io.rest-assured:spring-web-test-client:5.2.0'
     testImplementation 'io.rest-assured:scala-support:5.2.0'
     testImplementation 'io.rest-assured:kotlin-extensions:5.2.0'
+    testImplementation 'org.testng:testng:7.6.1'
+
+
 }
 
 
 test {
-    testLogging {
-        showStandardStreams = true // Log any output that the tests write to stdout or stderr
-        events "passed", "skipped", "failed" // Log the execution of each test and its result
-    }
+    useTestNG()
 }
