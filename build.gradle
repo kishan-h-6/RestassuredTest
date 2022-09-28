@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testImplementation 'io.rest-assured:rest-assured:5.2.0'
+    testImplementation 'io.rest-assured:json-path:5.2.0'
+    testImplementation 'io.rest-assured:xml-path:5.2.0'
+    testImplementation 'io.rest-assured:json-schema-validator:5.2.0'
+    testImplementation 'io.rest-assured:spring-mock-mvc:5.2.0'
+    testImplementation 'io.rest-assured:spring-web-test-client:5.2.0'
+    testImplementation 'io.rest-assured:scala-support:5.2.0'
+    testImplementation 'io.rest-assured:kotlin-extensions:5.2.0'
+}
+
+
+test {
+    testLogging {
+        showStandardStreams = true // Log any output that the tests write to stdout or stderr
+        events "passed", "skipped", "failed" // Log the execution of each test and its result
+    }
+}
